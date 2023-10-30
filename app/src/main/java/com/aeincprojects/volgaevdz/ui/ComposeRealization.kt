@@ -2,12 +2,14 @@ package com.aeincprojects.volgaevdz.ui
 
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -29,7 +31,7 @@ fun MakeScreen(){
         Box(modifier = Modifier.fillMaxHeight(0.7f).fillMaxWidth(1f), contentAlignment = Alignment.Center){
             Text(modifier = Modifier.background(Color.White).padding(horizontal = 30.dp, vertical = 20.dp), text = textNumber, fontSize = 22.sp)
         }
-        TextButton(modifier = Modifier.align(Alignment.CenterHorizontally).background(Color.White), onClick = {
+        TextButton(modifier = Modifier.align(Alignment.CenterHorizontally).background(Color.White).border(2.dp, Color.DarkGray, shape = RoundedCornerShape(6.dp)), onClick = {
             textNumber = (0..100).random().toString()
         }) {
             Text(text = "Сгенерировать число", fontSize = 22.sp)
